@@ -1,0 +1,241 @@
+
+[Spas-MacBook-Pro:~/Library] sgetov% cd ~
+[Spas-MacBook-Pro:~] sgetov% xcode-select --install
+xcode-select: note: install requested for command line developer tools
+[Spas-MacBook-Pro:~] sgetov% git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout    Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+[Spas-MacBook-Pro:~] sgetov% git --version
+git version 2.20.1 (Apple Git-117)
+[Spas-MacBook-Pro:~] sgetov% git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout    Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+[Spas-MacBook-Pro:~] sgetov% git --version
+git version 2.20.1 (Apple Git-117)
+[Spas-MacBook-Pro:~] sgetov% git config --global user.name "spasyg"
+[Spas-MacBook-Pro:~] sgetov% git config --global user.name
+spasyg
+[Spas-MacBook-Pro:~] sgetov% git config --global user.email "svgetov@gmail.com"
+[Spas-MacBook-Pro:~] sgetov% git config --global user.email
+svgetov@gmail.com
+[Spas-MacBook-Pro:~] sgetov% git credential-osxkeychain
+usage: git credential-osxkeychain <get|store|erase>
+[Spas-MacBook-Pro:~] sgetov% git config --global credential.helper osxkeychain
+
+
+[Spas-MacBook-Pro:My Admin/New Roads/Software Development] sgetov% cd Git
+[Spas-MacBook-Pro:New Roads/Software Development/Git] sgetov% mkdir git_practice
+[Spas-MacBook-Pro:New Roads/Software Development/Git] sgetov% cd git_practice
+[Spas-MacBook-Pro:Software Development/Git/git_practice] sgetov% git init
+Initialized empty Git repository in /Users/sgetov/Documents/My Admin/New Roads/Software Development/Git/git_practice/.git/
+[Spas-MacBook-Pro:Software Development/Git/git_practice] sgetov% echo "Hello Git and Github" >> README.txt
+[Spas-MacBook-Pro:Software Development/Git/git_practice] sgetov% git add README.txt
+[Spas-MacBook-Pro:Software Development/Git/git_practice] sgetov% git commit -m "First commit"
+[master (root-commit) b776430] First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+[Spas-MacBook-Pro:Software Development/Git/git_practice] sgetov% git status
+On branch master
+nothing to commit, working tree clean
+[Spas-MacBook-Pro:Software Development/Git/git_practice] sgetov% git remote add origin https://github.com/spasyg/git_practice.git
+[Spas-MacBook-Pro:Software Development/Git/git_practice] sgetov% git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 227 bytes | 227.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/spasyg/git_practice.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+[Spas-MacBook-Pro:Software Development/Code Academy Data Science/Learn SQL] sgetov% cd SQL\ population\ projects/
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL population projects] sgetov% git init
+Initialized empty Git repository in /Users/sgetov/Documents/My Admin/New Roads/Software Development/Code Academy Data Science/Learn SQL/SQL population projects/.git/
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL population projects] sgetov% git add US_census_practice_queries
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL population projects] sgetov% git commit -m "First commit"
+[master (root-commit) 6a65c81] First commit
+ 1 file changed, 683 insertions(+)
+ create mode 100644 US_census_practice_queries
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL population projects] sgetov% git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+	acs-1-year-2015.sqlite
+	db.sqlite
+	population_queries.sql
+	sql-population-queries-starting/
+	sqlite-tools-osx-x86-3310100/
+
+nothing added to commit but untracked files present (use "git add" to track)
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL population projects] sgetov% git remote add origin https://github.com/spasyg/US_census_SQL_practice.git
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL population projects] sgetov% git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 5.55 KiB | 5.55 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/spasyg/US_census_SQL_practice.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL population projects] sgetov% cd WorldPopulation1/
+[Spas-MacBook-Pro:Learn SQL/SQL population projects/WorldPopulation1] sgetov% git init
+Initialized empty Git repository in /Users/sgetov/Documents/My Admin/New Roads/Software Development/Code Academy Data Science/Learn SQL/SQL population projects/WorldPopulation1/.git/
+[Spas-MacBook-Pro:Learn SQL/SQL population projects/WorldPopulation1] sgetov% git add SQLWorldPopulation1
+[Spas-MacBook-Pro:Learn SQL/SQL population projects/WorldPopulation1] sgetov% git commit -m "First commit"
+[master (root-commit) 5f87d85] First commit
+ 1 file changed, 67 insertions(+)
+ create mode 100644 SQLWorldPopulation1
+[Spas-MacBook-Pro:Learn SQL/SQL population projects/WorldPopulation1] sgetov% git status
+On branch master
+nothing to commit, working tree clean
+[Spas-MacBook-Pro:Learn SQL/SQL population projects/WorldPopulation1] sgetov% git remote add origin https://github.com/spasyg/world_population1_SQL_practice.git
+[Spas-MacBook-Pro:Learn SQL/SQL population projects/WorldPopulation1] sgetov% git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 916 bytes | 916.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/spasyg/world_population1_SQL_practice.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+[Spas-MacBook-Pro:Learn SQL/SQL population projects/WorldPopulation1] sgetov%
+
+
+
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL_Codecademy_Learners_Project] sgetov% git init
+Initialized empty Git repository in /Users/sgetov/Documents/My Admin/New Roads/Software Development/Code Academy Data Science/Learn SQL/SQL_Codecademy_Learners_Project/.git/
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL_Codecademy_Learners_Project] sgetov% git add Codecademy_Learners_Project_Solutions
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL_Codecademy_Learners_Project] sgetov% git commit -m "First commit"
+[master (root-commit) df0e414] First commit
+ 1 file changed, 295 insertions(+)
+ create mode 100644 Codecademy_Learners_Project_Solutions
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL_Codecademy_Learners_Project] sgetov% git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.DS_Store
+	TerminalWorkingRaw
+	sql-codecademy-learners-starting/
+
+nothing added to commit but untracked files present (use "git add" to track)
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL_Codecademy_Learners_Project] sgetov% git remote add origin https://github.com/spasyg/Codecademey_Learners_SQL_Proj.git
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL_Codecademy_Learners_Project] sgetov% git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.44 KiB | 2.44 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/spasyg/Codecademey_Learners_SQL_Proj.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+[Spas-MacBook-Pro:Code Academy Data Science/Learn SQL/SQL_Codecademy_Learners_Project] sgetov% 
+
+
+#####
+Making a second commit
+#####
+(base) Spas-MacBook-Pro:SQL_Codecademy_Learners_Project sgetov$ git add Codecademy_Learners_Project_Solutions.sqlite
+(base) Spas-MacBook-Pro:SQL_Codecademy_Learners_Project sgetov$ git commit -m "Second commit"
+[master bb7a97d] Second commit
+ 1 file changed, 295 insertions(+)
+ create mode 100644 Codecademy_Learners_Project_Solutions.sqlite
+(base) Spas-MacBook-Pro:SQL_Codecademy_Learners_Project sgetov$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 272 bytes | 272.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/spasyg/Codecademey_Learners_SQL_Proj.git
+   df0e414..bb7a97d  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
